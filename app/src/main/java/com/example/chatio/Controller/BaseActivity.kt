@@ -1,4 +1,4 @@
-package com.example.chatio
+package com.example.chatio.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

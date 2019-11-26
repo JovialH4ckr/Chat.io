@@ -1,10 +1,11 @@
-package com.example.chatio
+package com.example.chatio.Controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.chatio.Utilities.EXTRA_LEAGUE
+import com.example.chatio.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -19,20 +20,20 @@ class LeagueActivity : BaseActivity() {
         Womensbtn.isChecked = false
         Coedbtn.isChecked = false
 
-        selectedleague="Mens"
+        selectedleague = getString(R.string.mens)
     }
 
     fun onwomensclicked(view: View){
         Mensbtn.isChecked = false
         Coedbtn.isChecked = false
 
-        selectedleague = "Womens"
+        selectedleague = getString(R.string.womens)
     }
     fun oncoedclicked(view: View){
         Mensbtn.isChecked = false
         Womensbtn.isChecked = false
 
-        selectedleague = "Co-ed"
+        selectedleague = getString(R.string.co_ed)
     }
 
     fun leaguenextclicked(view: View){
@@ -42,7 +43,7 @@ class LeagueActivity : BaseActivity() {
             startActivity(skillActivity)
         }
         else{
-            Toast.makeText(this,"Please Select a League.",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,getString(R.string.leagueselect),Toast.LENGTH_SHORT).show()
         }
     }
 }
