@@ -57,10 +57,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/Mensbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/soosh_toggle"
+            android:onClick="onmensclicked"
             android:text="@string/mens"
             android:textColor="@color/colorAccent"
             android:textOff="@string/mens"
@@ -68,12 +69,13 @@
             android:textSize="18sp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton2"
+            android:id="@+id/Womensbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/soosh_toggle"
+            android:onClick="onwomensclicked"
             android:text="@string/womens"
             android:textColor="@color/colorAccent"
             android:textOff="@string/womens"
@@ -81,10 +83,11 @@
             android:textSize="18sp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton3"
+            android:id="@+id/Coedbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/soosh_toggle"
+            android:onClick="oncoedclicked"
             android:text="@string/co_ed"
             android:textColor="@color/colorAccent"
             android:textOff="@string/co_ed"
