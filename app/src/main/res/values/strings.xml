@@ -18,4 +18,13 @@
     <string name="on_going_all_out">ON GOING ALL OUT</string>
     <string name="find_the_team_in_your_city_and_dominate_your_league">Find The Team In Your City, And Dominate Your League</string>
     <string name="get_started">Get Started</string>
+<!--    <string name="background_image">Background Image</string>-->
+    <string name="i_am_a">I Am A:</string>
+<!--    <string name="beginner">Beginner</string>-->
+<!--    <string name="beginner">Beginner</string>-->
+    <string name="beginner">Beginner</string>
+<!--    <string name="advanced">Advanced</string>-->
+<!--    <string name="advanced">Advanced</string>-->
+    <string name="advanced">Advanced</string>
+    <string name="finish">Finish</string>
 </resources>
