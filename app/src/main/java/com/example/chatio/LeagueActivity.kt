@@ -3,7 +3,7 @@ package com.example.chatio
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class LeagueActivity : AppCompatActivity() {
+class LeagueActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
