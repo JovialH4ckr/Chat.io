@@ -4,13 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.chatio.Utilities.EXTRA_LEAGUE
+import com.example.chatio.Model.Player
 import com.example.chatio.R
+import com.example.chatio.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
 
-    var selectedleague = ""
+    //var selectedleague = ""
+    var player = Player("","")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
@@ -20,26 +22,26 @@ class LeagueActivity : BaseActivity() {
         Womensbtn.isChecked = false
         Coedbtn.isChecked = false
 
-        selectedleague = getString(R.string.mens)
+        player.league = getString(R.string.mens)
     }
 
     fun onwomensclicked(view: View){
         Mensbtn.isChecked = false
         Coedbtn.isChecked = false
 
-        selectedleague = getString(R.string.womens)
+        player.league = getString(R.string.womens)
     }
     fun oncoedclicked(view: View){
         Mensbtn.isChecked = false
         Womensbtn.isChecked = false
 
-        selectedleague = getString(R.string.co_ed)
+        player.league = getString(R.string.co_ed)
     }
 
     fun leaguenextclicked(view: View){
-        if (selectedleague != "" && ((Mensbtn.isChecked == true) || (Womensbtn.isChecked == true) || (Coedbtn.isChecked == true))) {
+        if (player.league != "" && ((Mensbtn.isChecked == true) || (Womensbtn.isChecked == true) || (Coedbtn.isChecked == true))) {
             val skillActivity = Intent(this, SkillActivity::class.java)
-            skillActivity.putExtra(EXTRA_LEAGUE, selectedleague)
+            skillActivity.putExtra(EXTRA_PLAYER, player)
             startActivity(skillActivity)
         }
         else{
